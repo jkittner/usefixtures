@@ -1,5 +1,5 @@
-[![ci](https://github.com/theendlessriver13/usefixtures/workflows/ci/badge.svg)](https://github.com/theendlessriver13/usefixtures/actions?query=workflow%3Aci)
-[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/theendlessriver13/usefixtures/main.svg)](https://results.pre-commit.ci/latest/github/theendlessriver13/usefixtures/main)
+[![ci](https://github.com/jkittner/usefixtures/workflows/ci/badge.svg)](https://github.com/jkittner/usefixtures/actions?query=workflow%3Aci)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/jkittner/usefixtures/main.svg)](https://results.pre-commit.ci/latest/github/jkittner/usefixtures/main)
 
 # usefixtures
 
@@ -10,7 +10,7 @@ A code formatter to rewrite pytest fixtures passed as unused arguments as a `@py
 ## Installation
 
 ```
-pip install git+https://github.com/theendlessriver13/usefixtures/main
+pip install git+https://github.com/jkittner/usefixtures/main
 ```
 
 ## usage
@@ -32,7 +32,7 @@ See [pre-commit](https://pre-commit.com) for instructions
 Sample `.pre-commit-config.yaml`:
 
 ```yaml
-- repo: https://github.com/theendlessriver13/usefixtures
+- repo: https://github.com/jkittner/usefixtures
   rev: 0.0.0
   hooks:
     - id: usefixtures
