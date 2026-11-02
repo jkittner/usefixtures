@@ -47,7 +47,7 @@ def _fix_src_1st_pass(contents_text: str, fname: str) -> str:
                 'test' in node.name and
                 _has_args(node)
         ):
-            function_arg_names = {arg_name for arg_name in node.args.args}
+            function_arg_names = {*node.args.args}
             names_in_body: set[str] = set()
             for b in node.body:
                 names_in_body = names_in_body | _unused_args(b)
@@ -100,7 +100,7 @@ def _fix_src_2nd_pass(contents_text: str, fname: str) -> str:
                 _has_args(node)
         ):
             unused = []
-            function_arg_names = {arg_name for arg_name in node.args.args}
+            function_arg_names = {*node.args.args}
             names_in_body: set[str] = set()
             for b in node.body:
                 names_in_body = names_in_body | _unused_args(b)
@@ -171,7 +171,7 @@ def _fix_src_3rd_pass(contents_text: str, fname: str) -> str:
                 'test' in node.name and
                 _has_args(node)
         ):
-            function_arg_names = {i for i in node.args.args}
+            function_arg_names = {*node.args.args}
             names_in_body: set[str] = set()
             for i in node.body:
                 names_in_body = names_in_body | _unused_args(i)
